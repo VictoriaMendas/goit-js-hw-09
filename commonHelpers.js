@@ -1,0 +1,2 @@
+import"./assets/common-70025935.js";function o(){return`#${Math.floor(Math.random()*16777215).toString(16).padStart(6,0)}`}const e=document.querySelector(".startBtn"),t=document.querySelector(".stopBtn");let n=null;t.disabled=!0;e.addEventListener("click",r);t.addEventListener("click",l);function r(){e.disabled=!0,t.disabled=!1,n=setInterval(()=>{document.body.style.backgroundColor=o()},1e3)}function l(){e.disabled=!1,t.disabled=!0,clearInterval(n)}
+//# sourceMappingURL=commonHelpers.js.map
