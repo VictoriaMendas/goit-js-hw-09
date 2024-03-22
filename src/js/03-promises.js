@@ -5,12 +5,11 @@ function createPromise(position, delay) {
     const shouldResolve = Math.random() > 0.3;
 
     if (shouldResolve) {
-      resolve('hi');
+      Notiflix.Promise.resolve('Weelcooom');
     } else {
-      reject('goodbye');
+      Notiflix.Promise.reject('goodbye');
     }
   });
-  return promise;
 }
 
 const createSubmitForm = document.querySelector('.form');
@@ -18,14 +17,19 @@ const createSubmitForm = document.querySelector('.form');
 createSubmitForm.addEventListener('submit', onBtnClickSubmitForm);
 
 function onBtnClickSubmitForm(e) {
-  console.log(e.target);
-  setTimeout(() => {
-    createPromise(100, 1000)
-      .then(({ position, delay }) => {
-        // console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-      })
-      .catch(({ position, delay }) => {
-        // console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-      });
-  }, 1000);
+  e.preventDefault();
+
+  const form = e.target;
+  const firstDelay = form.elements.delay.value;
+  const stepDelay = form.elements.step.value;
+  const amount = form.elements.amount.value;
+  console.log`${firstDelay}:${stepDelay}:${amount}`;
+  // createPromise(100, 1000)
+  //     .then(({ position, delay }) => {
+  //       // Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`);
+  //     })
+  //     .catch(({ position, delay }) => {
+  //       //Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`);
+  //     });
+  // }, 1000);
 }
