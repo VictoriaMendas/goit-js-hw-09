@@ -47,7 +47,7 @@ function onStartClickBtn(e) {
     valueDays.innerHTML = addLeadingZero(timeObj.days);
     buttonStart.disabled = true;
 
-    if (timeDifference <= 0) {
+    if (timeDifference <= 1000) {
       clearInterval(timerId);
       alert('Our discount time is finita lia comedia:)');
       return;
