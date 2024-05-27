@@ -1,11 +1,8 @@
-import debounce from 'lodash.debounce';
-import throttle from 'lodash.throttle';
-
 const feedbackForm = document.querySelector('.feedback-form');
 
 const { email, message } = feedbackForm.elements;
 feedbackForm.addEventListener('submit', onClickSubmitBtn);
-feedbackForm.addEventListener('input', debounce(onInputChanged, 500));
+feedbackForm.addEventListener('input', onInputChanged);
 
 const STORAGE_KEY = 'feedback-form-state';
 
