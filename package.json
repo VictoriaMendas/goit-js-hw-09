@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/goit-js-hw-08/",
+    "build": "vite build --base=/goit-js-hw-09/",
     "preview": "vite preview",
     "start": "node 01-video.js"
   },
@@ -16,9 +16,6 @@
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "@vimeo/player": "^2.21.0",
-    "lodash.debounce": "^4.0.8",
-    "lodash.throttle": "^4.1.1",
     "simplelightbox": "^2.14.2",
     "validator": "^13.11.0",
     "vite-plugin-full-reload": "^1.0.5",
